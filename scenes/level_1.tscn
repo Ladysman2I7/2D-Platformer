@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://l156hxyng5oc" path="res://scenes/ player.tscn" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://eyths1tg8jyi" path="res://scenes/enemy.tscn" id="4_5xbjy"]
 [ext_resource type="Script" uid="uid://qs5gbrucx4b5" path="res://scripts/coin.gd" id="5_fcfvj"]
-[ext_resource type="Texture2D" uid="uid://eaw0tcddq6vi" path="res://Sprites/Objects/tile_0151.png" id="6_pa8r4"]
+[ext_resource type="PackedScene" uid="uid://7r26fmpk331t" path="res://scenes/end_flag.tscn" id="6_fcfvj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_15mv3"]
 radius = 6.0
@@ -47,7 +47,6 @@ script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
 position = Vector2(42, -26)
@@ -59,7 +58,6 @@ script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin2"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2"]
 position = Vector2(42, -26)
@@ -71,7 +69,6 @@ script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin3"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3"]
 position = Vector2(42, -26)
@@ -83,10 +80,12 @@ script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin4"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin4"]
 position = Vector2(42, -26)
 shape = SubResource("CircleShape2D_15mv3")
+
+[node name="EndFlag" parent="." instance=ExtResource("6_fcfvj")]
+scene_to_load = null
 
 [connection signal="body_entered" from="Coin" to="TileMapLayer/player" method="_on_coin_body_entered"]

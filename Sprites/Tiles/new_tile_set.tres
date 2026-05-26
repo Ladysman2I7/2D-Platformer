@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://dbpjgcipd6tx8" path="res://Sprites/Tiles/tiles_packed.png" id="1_utyll"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_utyll"]
-load_path = "res://.godot/imported/Floors_Tiles.png-40a2e11288c0dd62c96f5a67019b550f.ctex"
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2pjr7"]
 texture = SubResource("CompressedTexture2D_utyll")

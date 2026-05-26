@@ -59,3 +59,7 @@ func game_over ():
 func increase_score (_amount : int):
 	PlayerStats.score += _amount
 	print(PlayerStats.score)
+
+
+func _on_coin_body_entered(body: Node2D) -> void:
+	pass # Replace with function body.
