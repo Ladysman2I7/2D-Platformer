@@ -1,11 +1,13 @@
-[gd_scene load_steps=8 format=4 uid="uid://b1j48wmuo13mr"]
+[gd_scene load_steps=8 format=4 uid="uid://bjky6875baijl"]
 
 [ext_resource type="TileSet" uid="uid://bphy4st8ym4ie" path="res://Sprites/Tiles/new_tile_set.tres" id="1_014kd"]
-[ext_resource type="Texture2D" uid="uid://daddmg1hkc27d" path="res://Sprites/Backgrounds/backgroundForest.png" id="1_rus8k"]
+[ext_resource type="Texture2D" uid="uid://bskop2jc60782" path="res://Sprites/Backgrounds/background 2/orig.png" id="1_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://l156hxyng5oc" path="res://scenes/ player.tscn" id="3_5xbjy"]
 [ext_resource type="PackedScene" uid="uid://eyths1tg8jyi" path="res://scenes/enemy.tscn" id="4_5xbjy"]
 [ext_resource type="Script" uid="uid://qs5gbrucx4b5" path="res://scripts/coin.gd" id="5_fcfvj"]
-[ext_resource type="Texture2D" uid="uid://eaw0tcddq6vi" path="res://Sprites/Objects/tile_0151.png" id="6_pa8r4"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_wo48x"]
+load_path = "res://.godot/imported/tile_0151.png-eb1ca6b73c70795b386eb70d4ec8c4c6.ctex"
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_15mv3"]
 radius = 6.0
@@ -13,30 +15,35 @@ radius = 6.0
 [node name="Main" type="Node2D"]
 
 [node name="BackgroundForest" type="Sprite2D" parent="."]
-position = Vector2(384, 47)
-texture = ExtResource("1_rus8k")
+position = Vector2(437, 89.99999)
+scale = Vector2(2.7460938, 3.280864)
+texture = ExtResource("1_b4j7a")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD//wEABQACAAYAAAAAAAEABQACAAYAAAABAAEABQACAAYAAAABAAIABQACAAYAAAAAAAIABQACAAYAAAD//wIABQACAAYAAAACAAEABQACAAYAAAACAAIABQACAAYAAAADAAEABQACAAYAAAADAAIABQACAAYAAAD//wMABQACAAYAAAAAAAMABQACAAYAAAABAAMABQACAAYAAAACAAMABQACAAYAAAADAAMABQACAAYAAAD+/wEABQACAAYAAAD9/wIABQACAAYAAAD+/wIABQACAAYAAAD9/wEABQACAAYAAAD9/wMABQACAAYAAAD//wQABQACAAYAAAD+/wMABQACAAYAAAD9/wQABQACAAYAAAD+/wQABQACAAYAAAAAAAQABQACAAYAAAABAAQABQACAAYAAAACAAQABQACAAYAAAADAAQABQACAAYAAAAGAAEABQACAAYAAAAGAAIABQACAAYAAAAHAAEABQACAAYAAAAIAAEABQACAAYAAAAIAAIABQACAAYAAAAHAAIABQACAAYAAAAKAAEABQACAAYAAAAKAAIABQACAAYAAAAOAAIABQACAAEAAAAOAAMABQACAAYAAAASAAIABQACAAEAAAARAAIABQACAAEAAAATAAIABQACAAEAAAAUAAIABQACAAEAAAARAAMABQACAAYAAAARAAQABQACAAYAAAASAAQABQACAAYAAAATAAQABQACAAYAAAATAAMABQACAAYAAAASAAMABQACAAYAAAAUAAMABQACAAYAAAAUAAQABQACAAYAAAAWAAIABQACAAEAAAAZAAIABQACAAEAAAAaAAIABQACAAEAAAAbAAEABQACAAEAAAAcAAEABQACAAEAAAAZAAMABQACAAYAAAAaAAMABQACAAYAAAAbAAMABQACAAYAAAAcAAMABQACAAYAAAAbAAIABQACAAYAAAAcAAIABQACAAYAAAAZAAQABQACAAYAAAAaAAQABQACAAYAAAAbAAQABQACAAYAAAAcAAQABQACAAYAAAAfAAIABQACAAYAAAAgAAIABQACAAYAAAAhAAIABQACAAYAAAAiAAIABQACAAYAAAAjAAIABQACAAYAAAAkAAIABQACAAYAAAAfAAEABQACAAEAAAAgAAEABQACAAEAAAAhAAEABQACAAEAAAAiAAEABQACAAEAAAAjAAEABQACAAEAAAAkAAEABQACAAEAAAAgAAMABQACAAYAAAAfAAMABQACAAYAAAAhAAMABQACAAYAAAAiAAMABQACAAYAAAAkAAMABQACAAYAAAAjAAMABQACAAYAAAD9/wAABQACAAYAAAD+/wAABQACAAYAAAD//wAABQACAAYAAAAAAAAABQACAAYAAAABAAAABQACAAYAAAACAAAABQACAAYAAAADAAAABQACAAYAAAANAAIABQACAAEAAAANAAMABQACAAYAAAD9////BQACAAEAAAD+////BQACAAEAAAD/////BQACAAEAAAAAAP//BQACAAEAAAABAP//BQACAAEAAAACAP//BQACAAEAAAADAP//BQACAAEAAAAGAAAABQACAAYAAAAHAAAABQACAAYAAAAIAAAABQACAAYAAAAGAP//BQACAAEAAAAHAP//BQACAAEAAAAIAP//BQACAAEAAAAKAAAABQACAAEAAAAQAAIABQACAAEAAAAQAAMABQACAAYAAAAQAAQABQACAAYAAAA=")
+tile_map_data = PackedByteArray("AAD+/wkABQACAAYAAAD//wkABQACAAYAAAAAAAkABQACAAYAAAABAAkABQACAAYAAAABAAoABQACAAYAAAD+/woABQACAAYAAAD//woABQACAAYAAAAAAAoABQACAAYAAAD+/wgABQACAAYAAAD//wgABQACAAYAAAAAAAgABQACAAYAAAABAAgABQACAAYAAAD+/wcABQACAAYAAAD//wcABQACAAYAAAAAAAcABQACAAYAAAABAAcABQACAAYAAAD9/woABQACAAYAAAAHAAcABQACAAYAAAAIAAcABQACAAYAAAAIAAgABQACAAYAAAAJAAkABQACAAYAAAAJAAoABQACAAYAAAAIAAoABQACAAYAAAAHAAoABQACAAYAAAAIAAkABQACAAYAAAAHAAkABQACAAYAAAAHAAgABQACAAYAAAAJAAgABQACAAYAAAAJAAcABQACAAYAAAAIAAYABQACAAYAAAAJAAYABQACAAYAAAAKAAYABQACAAYAAAAKAAcABQACAAYAAAAKAAgABQACAAYAAAAKAAkABQACAAYAAAAKAAoABQACAAYAAAANAAcABQACAAYAAAATAAcABQACAAYAAAAUAAcABQACAAYAAAAUAAYABQACAAYAAAAVAAYABQACAAYAAAAVAAUABQACAAYAAAAVAAcABQACAAYAAAAWAAUABQACAAYAAAAWAAYABQACAAYAAAAWAAcABQACAAYAAAAOAAgABQACAAYAAAAOAAcABQACAAYAAAAPAAcABQACAAYAAAAPAAgABQACAAYAAAAGAAoABQACAAYAAAAFAAoABQACAAYAAAAGAAkABQACAAYAAAAGAAgABQACAAYAAAAFAAkABQACAAYAAAAGAAcABQACAAYAAAA=")
 tile_set = ExtResource("1_014kd")
 
 [node name="player" parent="TileMapLayer" instance=ExtResource("3_5xbjy")]
-position = Vector2(0, -17)
+position = Vector2(2, 125)
 
 [node name="Enemy" parent="." instance=ExtResource("4_5xbjy")]
+visible = false
 position = Vector2(-2, -1)
 
 [node name="Enemy2" parent="." instance=ExtResource("4_5xbjy")]
+visible = false
 position = Vector2(125, 28)
 move_direction = Vector2(0, -60)
 move_speed = 40.0
 
 [node name="Enemy3" parent="." instance=ExtResource("4_5xbjy")]
+visible = false
 position = Vector2(342, 47)
 move_direction = Vector2(0, -60)
 move_speed = 60.0
 
 [node name="Enemy4" parent="." instance=ExtResource("4_5xbjy")]
+visible = false
 position = Vector2(449, 38)
 move_direction = Vector2(0, -90)
 move_speed = 100.0
@@ -46,44 +53,49 @@ position = Vector2(0, -4)
 script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin"]
+visible = false
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
+texture = SubResource("CompressedTexture2D_wo48x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin"]
-position = Vector2(42, -26)
+visible = false
+position = Vector2(41, -25)
 shape = SubResource("CircleShape2D_15mv3")
 
 [node name="Coin2" type="Area2D" parent="."]
+visible = false
 position = Vector2(93, 0)
 script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin2"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
+texture = SubResource("CompressedTexture2D_wo48x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2"]
 position = Vector2(42, -26)
 shape = SubResource("CircleShape2D_15mv3")
 
 [node name="Coin3" type="Area2D" parent="."]
+visible = false
 position = Vector2(147, 16)
 script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin3"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
+texture = SubResource("CompressedTexture2D_wo48x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3"]
 position = Vector2(42, -26)
 shape = SubResource("CircleShape2D_15mv3")
 
 [node name="Coin4" type="Area2D" parent="."]
+visible = false
 position = Vector2(292, 53)
 script = ExtResource("5_fcfvj")
 
 [node name="Sprite" type="Sprite2D" parent="Coin4"]
 position = Vector2(42, -26)
-texture = ExtResource("6_pa8r4")
+texture = SubResource("CompressedTexture2D_wo48x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Coin4"]
 position = Vector2(42, -26)

@@ -77,7 +77,7 @@ _data = {
 &"move": SubResource("Animation_ueu80")
 }
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["Player"]]
 script = ExtResource("1_x3bu2")
 
 [node name="sprite" type="Sprite2D" parent="."]
